@@ -1,0 +1,89 @@
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600;700;800&display=swap");
+
+:root {
+  --font-family: "Manrope", sans-serif;
+  --color-main: #4d9559;
+  --white: #fff;
+  --gray-100: #f8f9fa;
+  --gray-200: #e9ecef;
+  --gray-300: #dee2e6;
+  --gray-400: #ced4da;
+  --gray-500: #adb5bd;
+  --gray-600: #868e96;
+  --gray-700: #495057;
+  --gray-800: #343a40;
+  --gray-900: #212529;
+  --black: #000;
+}
+
+body {
+  background-color: var(--color-bg);
+  font-family: var(--font-family);
+}
+
+h2 {
+  font-size: 2.5rem;
+  font-weight: 500;
+}
+
+h3 {
+  font-size: 1.625rem;
+  font-weight: 700;
+}
+
+h4 {
+  font-size: 1.375rem;
+  font-weight: 700;
+}
+
+h5 {
+  font-size: 1.375rem;
+  font-weight: 600;
+}
+
+p {
+  font-size: 1rem;
+}
+
+section {
+  padding: 6em 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+@media screen and (max-width: 962px) {
+  h2 {
+    font-size: 2rem;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  section {
+    padding: 4em 0;
+  }
+
+  h2 {
+    font-size: 1.75rem;
+  }
+
+  h3 {
+    font-size: 1.375rem;
+  }
+
+  h4,
+  h5 {
+    font-size: 1.25rem;
+  }
+
+  p {
+    font-size: 0.875rem;
+  }
+}
+
+@media screen and (max-width: 540px) {
+  h2 {
+    font-size: 1.5rem;
+  }
+}
