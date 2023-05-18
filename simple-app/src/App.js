@@ -7,6 +7,7 @@ import {
 import "./App.css";
 import SearchBar from "./components/searchbar/SearchBar";
 import Home from "./pages/home/Home";
+import ResultsPage from "./pages/results/ResultsPage";
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
         <Routes>
           <Route path="/" element={<Navigate to="/home" />} />
           <Route path="/home" element={<Home />} />
+          <Route path="/anime" element={<ResultsPage />} />
         </Routes>
       </Router>
     </div>
