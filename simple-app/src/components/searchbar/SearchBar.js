@@ -1,22 +1,19 @@
-import { useRef } from "react";
+import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import "./searchBar.css";
 
 function SearchBar() {
-  const formRef = useRef(null);
-
+  const [searchTerm, setSearchTerm] = useState("");
   let navigate = useNavigate();
 
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    const searchTerm = formRef.current["searchTerm"].value;
-
     if (searchTerm) {
       navigate(`/anime?searchQuery=${searchTerm || "none"}&page=${1}`);
     }
 
-    formRef.current.reset();
+    setSearchTerm("");
   };
 
   return (
@@ -25,14 +22,14 @@ function SearchBar() {
         className="search-form"
         autoComplete="off"
         noValidate
-        ref={formRef}
         onSubmit={handleSubmit}
       >
         <input
           type="text"
           className="search-input"
-          placeholder="Search"
-          name="searchTerm"
+          placeholder="SEARCH"
+          value={searchTerm}
+          onChange={(e) => setSearchTerm(e.target.value)}
         ></input>
         <button className="search-btn" type="submit"></button>
       </form>

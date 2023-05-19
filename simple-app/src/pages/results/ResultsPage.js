@@ -8,6 +8,7 @@ import ResultsHeader from "../../components/resultsHeader/ResultsHeader";
 
 import "./results.css";
 import LoadingCircle from "../../components/loader/LoadingCircle";
+import Card from "../../components/card/Card";
 
 function ResultsPage() {
   function useQuery() {
@@ -60,6 +61,13 @@ function ResultsPage() {
   return (
     <div>
       <ResultsHeader numResults={results.count} />
+
+      <div className="cards">
+        {results.anime.data.map((anime, i) => (
+          <Card key={i} anime={anime} />
+        ))}
+      </div>
+
       <Pagination
         currentPage={page}
         pages={Math.ceil(results.count / 18)}
